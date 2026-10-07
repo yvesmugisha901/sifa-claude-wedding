@@ -26,7 +26,7 @@ export function InvitationIntro({ onOpen, musicAvailable, open }: Props) {
 
       <div className="rise relative z-10 flex h-full min-h-0 flex-col items-center justify-between overflow-y-auto px-6 pb-10 pt-12 text-center lg:items-start lg:justify-center lg:gap-6 lg:px-16 lg:py-8 lg:text-left">
         <div>
-          <p className="font-display text-2xl italic text-gold">Murahawe ikaze</p>
+          <p className="font-display text-2xl italic text-gold">MUHAWE IKAZE</p>
           <p className="mt-2 text-sm text-ivory/85">You are warmly invited to the wedding of</p>
         </div>
 
