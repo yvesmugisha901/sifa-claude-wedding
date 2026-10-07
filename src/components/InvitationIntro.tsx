@@ -23,8 +23,8 @@ export function InvitationIntro({ onOpen, musicAvailable, open }: Props) {
           className="absolute inset-0 h-full w-full object-cover object-[50%_62%]" />
         <div aria-hidden="true" className="absolute inset-0 bg-ink/65 lg:hidden" />
       </div>
-
-     <div className="rise relative z-10 flex h-full min-h-0 flex-col items-center justify-center gap-5 overflow-y-auto px-5 pt-8 pb-32 text-center lg:items-start lg:gap-6 lg:px-16 lg:py-8 lg:text-left">
+<div className="rise relative z-10 flex h-full min-h-0 flex-col items-center justify-start gap-5 overflow-y-auto px-5 pt-[7svh] pb-8 text-center lg:items-start lg:justify-center lg:gap-6 lg:px-16 lg:py-8 lg:text-left">
+        <p className="font-display text-2xl italic text-gold">MUHAWE IKAZE</p>
         <p className="-mt-3 text-base text-ivory/90">You are warmly invited to the wedding of</p>
 
         <h1 className="w-full font-display font-bold italic leading-none text-gold [text-shadow:0_2px_20px_rgba(0,0,0,.7)]">
