@@ -1,4 +1,5 @@
 /** Single source of truth. Edit this file to change anything on the site. */
+import extraPhotos from "./gallery.json";
 export type EventType = "traditional" | "church" | "reception";
 
 export interface WeddingEvent {
@@ -35,11 +36,11 @@ export const wedding = {
     { src: "/images/bouquet-bw.webp", w: 718, h: 1080, alt: "Claude holding a bouquet behind his back, hand in hand with Sifa" },
     { src: "/images/hands.webp", w: 718, h: 1080, alt: "Joined hands showing Sifa's engagement ring" },
   ] as Photo[],
-  gallery: [
+   gallery: ([
     { src: "/images/couple-sofa.webp", w: 888, h: 1280, alt: "Sifa and Claude seated together beside a bouquet of red roses" },
     { src: "/images/hands.webp", w: 718, h: 1080, alt: "Joined hands showing Sifa's engagement ring and bracelet" },
     { src: "/images/bouquet-bw.webp", w: 718, h: 1080, alt: "Black and white photo of Claude holding a bouquet while holding Sifa's hand" },
-  ] as Photo[],
+  ] as Photo[]).concat(extraPhotos as Photo[]),
   music: { src: "/assets/music/wedding-song.mp3" },
   events: [
     {

@@ -1,0 +1,80 @@
+[
+  {
+    "src": "/images/gallery/photo-01.webp",
+    "w": 498,
+    "h": 1080,
+    "alt": "Sifa and Claude, photo 1"
+  },
+  {
+    "src": "/images/gallery/photo-02.webp",
+    "w": 718,
+    "h": 1080,
+    "alt": "Sifa and Claude, photo 2"
+  },
+  {
+    "src": "/images/gallery/photo-03.webp",
+    "w": 1080,
+    "h": 718,
+    "alt": "Sifa and Claude, photo 3"
+  },
+  {
+    "src": "/images/gallery/photo-04.webp",
+    "w": 1080,
+    "h": 718,
+    "alt": "Sifa and Claude, photo 4"
+  },
+  {
+    "src": "/images/gallery/photo-05.webp",
+    "w": 1080,
+    "h": 718,
+    "alt": "Sifa and Claude, photo 5"
+  },
+  {
+    "src": "/images/gallery/photo-06.webp",
+    "w": 718,
+    "h": 1080,
+    "alt": "Sifa and Claude, photo 6"
+  },
+  {
+    "src": "/images/gallery/photo-07.webp",
+    "w": 674,
+    "h": 1280,
+    "alt": "Sifa and Claude, photo 7"
+  },
+  {
+    "src": "/images/gallery/photo-08.webp",
+    "w": 1080,
+    "h": 1070,
+    "alt": "Sifa and Claude, photo 8"
+  },
+  {
+    "src": "/images/gallery/photo-09.webp",
+    "w": 591,
+    "h": 1280,
+    "alt": "Sifa and Claude, photo 9"
+  },
+  {
+    "src": "/images/gallery/photo-10.webp",
+    "w": 718,
+    "h": 1080,
+    "alt": "Sifa and Claude, photo 10"
+  },
+  {
+    "src": "/images/gallery/photo-11.webp",
+    "w": 718,
+    "h": 1080,
+    "alt": "Sifa and Claude, photo 11"
+  },
+  {
+    "src": "/images/gallery/photo-12.webp",
+    "w": 718,
+    "h": 1080,
+    "alt": "Sifa and Claude, photo 12"
+  },
+  {
+    "src": "/images/gallery/photo-13.webp",
+    "w": 782,
+    "h": 1080,
+    "alt": "Sifa and Claude, photo 13"
+  }
+]
