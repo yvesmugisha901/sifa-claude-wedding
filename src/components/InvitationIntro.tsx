@@ -17,7 +17,7 @@ export function InvitationIntro({ onOpen, musicAvailable, open }: Props) {
     <div role="dialog" aria-modal="true" aria-label="Wedding invitation"
       className={`fixed inset-0 z-[60] flex flex-col items-center justify-center bg-ink px-6 text-center text-ivory ${open ? "intro-out" : ""}`}>
       <div className="rise max-w-md">
-        <p className="font-display text-xl italic text-gold">Murahawe ikaze</p>
+        <p className="font-display text-xl italic text-gold">MUHAWE IKAZE</p>
         <h1 className="mt-6 font-display text-5xl leading-tight sm:text-6xl">You are warmly invited</h1>
         <p className="mt-4 text-sm text-ivory/70">to the wedding of {names}</p>
         <div className="mt-10 flex flex-col items-center gap-4">
