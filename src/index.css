@@ -39,3 +39,5 @@ body.locked { overflow: hidden; }
   .eq span, .rise { animation: none; }
   .intro-out { transition: none; }
 }
+.gallery { --h: 190px; }
+@media (min-width: 768px) { .gallery { --h: 280px; } }

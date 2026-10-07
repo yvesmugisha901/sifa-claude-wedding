@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState, type KeyboardEvent, type TouchEvent } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { wedding } from "../data/wedding";
-import { Reveal } from "./Reveal";
 
 const photos = wedding.gallery;
-const layout = ["col-span-2 md:col-span-1", "md:mt-20", "md:mt-8"];
 
 export function Gallery() {
   const [index, setIndex] = useState<number | null>(null);
@@ -28,19 +26,25 @@ export function Gallery() {
   const current = index === null ? null : photos[index];
 
   return (
-    <section id="gallery" aria-labelledby="gallery-title" className="on-light bg-paper px-5 py-20 sm:py-28">
+    <section id="gallery" aria-labelledby="gallery-title" className="on-light bg-paper px-3 py-20 sm:px-5 sm:py-28">
       <h2 id="gallery-title" className="text-center font-display text-4xl sm:text-5xl">Gallery</h2>
-      <div className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-3 md:grid-cols-3 md:gap-6">
-        {photos.map((p, i) => (
-          <Reveal key={p.src} className={layout[i % layout.length]}>
-            <button type="button" aria-label={`View photo ${i + 1} of ${photos.length}: ${p.alt}`} className="block w-full overflow-hidden"
-              onClick={(e) => { last.current = e.currentTarget; setIndex(i); }}>
-              <img src={p.src} width={p.w} height={p.h} alt="" loading="lazy" style={{ aspectRatio: i === 0 ? "4 / 5" : `${p.w} / ${p.h}` }}
-                className="w-full object-cover object-[50%_45%] transition-transform duration-[1200ms] hover:scale-[1.03]" />
-            </button>
-          </Reveal>
-        ))}
-      </div>
+      <ul className="gallery mx-auto mt-12 flex max-w-6xl flex-wrap gap-1.5 after:grow-[10000] after:content-[''] md:gap-2">
+        {photos.map((p, i) => {
+          const ratio = p.w / p.h;
+          return (
+            <li key={p.src} className="relative overflow-hidden bg-ink/10"
+              style={{ flexGrow: ratio * 100, flexBasis: `calc(var(--h) * ${ratio})` }}>
+              <div style={{ paddingBottom: `${100 / ratio}%` }} />
+              <button type="button" aria-label={`View photo ${i + 1} of ${photos.length}: ${p.alt}`}
+                className="absolute inset-0 block h-full w-full"
+                onClick={(e) => { last.current = e.currentTarget; setIndex(i); }}>
+                <img src={p.src} width={p.w} height={p.h} alt="" loading="lazy" decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.03]" />
+              </button>
+            </li>
+          );
+        })}
+      </ul>
       <dialog ref={dialog} aria-label="Photo viewer" onClose={() => setIndex(null)} onKeyDown={onKey}
         onClick={(e) => { if (e.target === dialog.current) close(); }}
         onTouchStart={(e) => { touchX.current = e.touches[0]?.clientX ?? 0; }} onTouchEnd={onTouchEnd}
